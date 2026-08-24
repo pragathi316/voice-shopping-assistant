@@ -54,34 +54,39 @@ hardcoded product responses.**
 | Deployment | Frontend → Vercel; Backend → Render/Railway |
 
 ## Project structure
+## Project structure
+
+```
 voice-shopping-assistant/
 ├── backend/
-│ ├── app/
-│ │ ├── main.py FastAPI app + routes
-│ │ ├── nlp.py Intent classification + entity extraction
-│ │ ├── vector_store.py Embeddings + FAISS semantic search/substitution
-│ │ ├── recommender.py Hybrid recommendation engine
-│ │ ├── database.py SQLAlchemy models
-│ │ └── schemas.py Pydantic request/response models
-│ ├── requirements.txt
-│ ├── Dockerfile
-│ └── .env.example
+│   ├── app/
+│   │   ├── main.py            FastAPI app + routes
+│   │   ├── nlp.py             Intent classification + entity extraction
+│   │   ├── vector_store.py    Embeddings + FAISS semantic search/substitution
+│   │   ├── recommender.py     Hybrid recommendation engine
+│   │   ├── database.py        SQLAlchemy models
+│   │   └── schemas.py         Pydantic request/response models
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── .env.example
 ├── frontend/
-│ ├── src/
-│ │ ├── components/ VoiceButton, ShoppingList, Recommendations,
-│ │ │ SearchPanel, InterpretationPanel
-│ │ ├── App.jsx
-│ │ ├── api.js API client
-│ │ └── index.css
-│ ├── package.json
-│ └── .env.example
+│   ├── src/
+│   │   ├── components/        VoiceButton, ShoppingList, Recommendations,
+│   │   │                      SearchPanel, InterpretationPanel
+│   │   ├── App.jsx
+│   │   ├── api.js             API client
+│   │   └── index.css
+│   ├── package.json
+│   └── .env.example
 ├── datasets/
-│ ├── products.csv 50-item grocery catalog
-│ └── purchase_history.csv Sample multi-user basket data
+│   ├── products.csv           50-item grocery catalog
+│   └── purchase_history.csv   Sample multi-user basket data
 ├── docs/
-│ ├── ARCHITECTURE.md
-│ └── WRITEUP.md
+│   ├── ARCHITECTURE.md
+│   └── WRITEUP.md
 └── README.md
+```
+
 
 ## Local setup
 
