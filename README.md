@@ -16,10 +16,11 @@ hardcoded product responses.**
 - **Voice input** — Web Speech API captures speech client-side; works with
   natural phrasing ("add apples" / "I need apples" / "please put apples in
   my cart" all resolve to the same intent).
-- **Intent classification** — zero-shot NLI model (`facebook/bart-large-mnli`)
-  classifies `ADD_ITEM`, `REMOVE_ITEM`, `UPDATE_ITEM`, `SEARCH_PRODUCT`,
-  `SUBSTITUTE_PRODUCT`, `GET_RECOMMENDATION` by entailment against
-  natural-language hypotheses.
+- **Intent classification** — embedding-based few-shot classification: each
+  of `ADD_ITEM`, `REMOVE_ITEM`, `UPDATE_ITEM`, `SEARCH_PRODUCT`,
+  `SUBSTITUTE_PRODUCT`, `GET_RECOMMENDATION` is anchored by example
+  phrasings, embedded with a sentence-transformer, and matched to the
+  closest intent by cosine similarity — not entailment, not keywords.
 - **Entity extraction** — spaCy statistical NER/POS for product, quantity,
   brand; regex only for parsing numeric price bounds ("under 200").
 - **Semantic search** — sentence-transformer embeddings + FAISS vector
@@ -45,7 +46,7 @@ hardcoded product responses.**
 | Frontend | React + Vite + Tailwind CSS |
 | Backend | FastAPI (Python) |
 | Speech-to-text | Web Speech API (browser-native, free) |
-| Intent classification | HuggingFace `transformers` zero-shot pipeline (BART-MNLI) |
+| Intent classification | `sentence-transformers` (`all-MiniLM-L6-v2`) few-shot exemplar matching |
 | Entity extraction | spaCy (`en_core_web_sm`) |
 | Semantic search / substitution | `sentence-transformers` (`all-MiniLM-L6-v2`) + FAISS |
 | Recommendation engine | Custom hybrid: co-occurrence (collaborative) + embeddings (content-based) |
@@ -53,37 +54,34 @@ hardcoded product responses.**
 | Deployment | Frontend → Vercel; Backend → Render/Railway |
 
 ## Project structure
-
-```
 voice-shopping-assistant/
 ├── backend/
-│   ├── app/
-│   │   ├── main.py            FastAPI app + routes
-│   │   ├── nlp.py             Intent classification + entity extraction
-│   │   ├── vector_store.py    Embeddings + FAISS semantic search/substitution
-│   │   ├── recommender.py     Hybrid recommendation engine
-│   │   ├── database.py        SQLAlchemy models
-│   │   └── schemas.py         Pydantic request/response models
-│   ├── requirements.txt
-│   ├── Dockerfile
-│   └── .env.example
+│ ├── app/
+│ │ ├── main.py FastAPI app + routes
+│ │ ├── nlp.py Intent classification + entity extraction
+│ │ ├── vector_store.py Embeddings + FAISS semantic search/substitution
+│ │ ├── recommender.py Hybrid recommendation engine
+│ │ ├── database.py SQLAlchemy models
+│ │ └── schemas.py Pydantic request/response models
+│ ├── requirements.txt
+│ ├── Dockerfile
+│ └── .env.example
 ├── frontend/
-│   ├── src/
-│   │   ├── components/        VoiceButton, ShoppingList, Recommendations,
-│   │   │                      SearchPanel, InterpretationPanel
-│   │   ├── App.jsx
-│   │   ├── api.js             API client
-│   │   └── index.css
-│   ├── package.json
-│   └── .env.example
+│ ├── src/
+│ │ ├── components/ VoiceButton, ShoppingList, Recommendations,
+│ │ │ SearchPanel, InterpretationPanel
+│ │ ├── App.jsx
+│ │ ├── api.js API client
+│ │ └── index.css
+│ ├── package.json
+│ └── .env.example
 ├── datasets/
-│   ├── products.csv           50-item grocery catalog
-│   └── purchase_history.csv   Sample multi-user basket data
+│ ├── products.csv 50-item grocery catalog
+│ └── purchase_history.csv Sample multi-user basket data
 ├── docs/
-│   ├── ARCHITECTURE.md
-│   └── WRITEUP.md
+│ ├── ARCHITECTURE.md
+│ └── WRITEUP.md
 └── README.md
-```
 
 ## Local setup
 
@@ -98,8 +96,8 @@ cp .env.example .env
 uvicorn app.main:app --reload
 ```
 
-First startup downloads the HF models (BART-MNLI, MiniLM) — a few hundred
-MB, one-time. API docs available at `http://localhost:8000/docs`.
+First startup downloads the sentence-transformer model (MiniLM) — under
+100MB, one-time. API docs available at `http://localhost:8000/docs`.
 
 ### Frontend
 

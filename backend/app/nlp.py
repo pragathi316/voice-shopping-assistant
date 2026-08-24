@@ -218,4 +218,4 @@ def analyze(text: str) -> NLUResult:
         category=category,
         price_max=price_max,
         price_min=price_min,
-    )
+    )   
