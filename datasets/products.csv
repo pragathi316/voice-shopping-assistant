@@ -1,0 +1,52 @@
+name,category,brand,price,description
+Whole Milk,Dairy,DairyPure,60,fresh whole cow milk rich and creamy
+Almond Milk,Dairy Alternatives,Silk,120,plant based milk made from almonds unsweetened
+Soy Milk,Dairy Alternatives,Silk,110,plant based milk made from soybeans
+Oat Milk,Dairy Alternatives,Oatly,140,creamy plant based milk made from oats
+Toned Milk,Dairy,Amul,55,low fat cow milk
+Greek Yogurt,Dairy,Epigamia,90,thick strained yogurt high in protein
+Butter,Dairy,Amul,65,salted dairy butter block
+Cheddar Cheese,Dairy,Britannia,180,aged cheddar cheese block
+Paneer,Dairy,Mother Dairy,90,fresh Indian cottage cheese
+Eggs,Dairy,Farm Fresh,80,fresh chicken eggs pack of 12
+Whole Wheat Bread,Bakery,Britannia,45,soft whole wheat sandwich bread
+Multigrain Bread,Bakery,Harvest Gold,55,multigrain healthy bread loaf
+Croissant,Bakery,Local Bakery,40,buttery flaky French pastry
+Bagels,Bakery,Local Bakery,70,dense chewy breakfast bread rings
+Apple,Fruits,Fresh Farm,150,crisp red apple sold per kg
+Banana,Fruits,Fresh Farm,50,ripe yellow banana sold per dozen
+Orange,Fruits,Fresh Farm,90,juicy citrus orange sold per kg
+Organic Mango,Fruits,Organic Farms,220,sweet organic mango sold per kg
+Organic Strawberries,Fruits,Organic Farms,180,fresh organic strawberries pack
+Grapes,Fruits,Fresh Farm,100,seedless green grapes sold per kg
+Spinach,Vegetables,Fresh Farm,30,leafy green spinach bunch
+Organic Broccoli,Vegetables,Organic Farms,140,fresh organic broccoli head
+Tomato,Vegetables,Fresh Farm,40,ripe red tomato sold per kg
+Carrot,Vegetables,Fresh Farm,35,fresh crunchy carrot sold per kg
+Organic Kale,Vegetables,Organic Farms,160,leafy organic kale bunch
+Potato Chips,Snacks,Lays,20,crispy salted potato chips
+Roasted Almonds,Snacks,Happilo,190,healthy roasted almonds pack unsalted
+Trail Mix,Snacks,Happilo,210,healthy mix of nuts seeds and dried fruit
+Granola Bar,Snacks,Kellogg's,60,healthy oats and honey granola bar
+Popcorn,Snacks,Act II,35,butter flavored microwave popcorn
+Dark Chocolate,Snacks,Amul,80,70 percent cocoa dark chocolate bar
+Basmati Rice,Grains,India Gate,180,premium long grain basmati rice 1kg
+Brown Rice,Grains,Fortune,150,whole grain brown rice healthy option 1kg
+Rolled Oats,Grains,Quaker,120,whole grain rolled oats healthy breakfast
+Whole Wheat Flour,Grains,Aashirvaad,90,whole wheat atta flour 5kg
+Quinoa,Grains,24 Mantra,320,protein rich organic quinoa healthy grain
+Chicken Breast,Meat,Licious,280,fresh boneless chicken breast per kg
+Salmon Fillet,Seafood,Licious,650,fresh atlantic salmon fillet per kg
+Tofu,Protein,Nutrela,80,soft plant based protein block
+Toothpaste,Personal Care,Colgate,90,mint flavored fluoride toothpaste
+Shampoo,Personal Care,Dove,220,moisturizing daily shampoo bottle
+Dish Soap,Household,Vim,60,grease cutting dish washing liquid
+Laundry Detergent,Household,Surf Excel,250,stain removing laundry detergent powder
+Green Tea,Beverages,Lipton,140,antioxidant rich green tea bags
+Orange Juice,Beverages,Real,90,fresh squeezed orange juice carton
+Coffee Beans,Beverages,Blue Tokai,380,freshly roasted arabica coffee beans
+Bottled Water,Beverages,Bisleri,20,packaged drinking water bottle
+Sparkling Water,Beverages,Perrier,150,carbonated sparkling mineral water
+Honey,Pantry,Dabur,180,pure natural honey jar
+Peanut Butter,Pantry,Pintola,220,natural creamy peanut butter jar
+Olive Oil,Pantry,Figaro,450,extra virgin cold pressed olive oil

@@ -1,0 +1,51 @@
+user_id,product,timestamp
+u1,Whole Milk,2025-07-01T09:00:00
+u1,Whole Wheat Bread,2025-07-01T09:00:00
+u1,Butter,2025-07-01T09:00:00
+u1,Eggs,2025-07-01T09:00:00
+u2,Whole Milk,2025-07-02T10:00:00
+u2,Cheddar Cheese,2025-07-02T10:00:00
+u2,Eggs,2025-07-02T10:00:00
+u3,Almond Milk,2025-07-02T11:00:00
+u3,Granola Bar,2025-07-02T11:00:00
+u3,Roasted Almonds,2025-07-02T11:00:00
+u4,Whole Wheat Bread,2025-07-03T08:30:00
+u4,Butter,2025-07-03T08:30:00
+u4,Whole Milk,2025-07-03T08:30:00
+u4,Paneer,2025-07-03T08:30:00
+u5,Apple,2025-07-03T12:00:00
+u5,Banana,2025-07-03T12:00:00
+u5,Organic Strawberries,2025-07-03T12:00:00
+u5,Greek Yogurt,2025-07-03T12:00:00
+u6,Spinach,2025-07-04T09:15:00
+u6,Organic Broccoli,2025-07-04T09:15:00
+u6,Organic Kale,2025-07-04T09:15:00
+u6,Tofu,2025-07-04T09:15:00
+u7,Whole Milk,2025-07-04T18:00:00
+u7,Eggs,2025-07-04T18:00:00
+u7,Whole Wheat Bread,2025-07-04T18:00:00
+u7,Cheddar Cheese,2025-07-04T18:00:00
+u8,Roasted Almonds,2025-07-05T10:00:00
+u8,Trail Mix,2025-07-05T10:00:00
+u8,Dark Chocolate,2025-07-05T10:00:00
+u9,Basmati Rice,2025-07-05T11:00:00
+u9,Whole Wheat Flour,2025-07-05T11:00:00
+u9,Olive Oil,2025-07-05T11:00:00
+u10,Chicken Breast,2025-07-06T14:00:00
+u10,Basmati Rice,2025-07-06T14:00:00
+u10,Tomato,2025-07-06T14:00:00
+u10,Carrot,2025-07-06T14:00:00
+u11,Coffee Beans,2025-07-06T08:00:00
+u11,Whole Milk,2025-07-06T08:00:00
+u11,Honey,2025-07-06T08:00:00
+u12,Green Tea,2025-07-07T09:00:00
+u12,Honey,2025-07-07T09:00:00
+u13,Oat Milk,2025-07-07T10:30:00
+u13,Rolled Oats,2025-07-07T10:30:00
+u13,Granola Bar,2025-07-07T10:30:00
+u14,Apple,2025-07-08T12:30:00
+u14,Peanut Butter,2025-07-08T12:30:00
+u14,Whole Wheat Bread,2025-07-08T12:30:00
+u15,Salmon Fillet,2025-07-08T17:00:00
+u15,Spinach,2025-07-08T17:00:00
+u15,Olive Oil,2025-07-08T17:00:00

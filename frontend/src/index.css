@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #fbf8f2;
+  --ink: #221f19;
+  --teal: #0f6b5c;
+  --teal-deep: #083f37;
+  --mango: #f4a94b;
+  --berry: #e85d75;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: "Inter", sans-serif;
+}
+
+.font-display {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.hero-blob {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-blob::before,
+.hero-blob::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+}
+
+.hero-blob::before {
+  width: 340px;
+  height: 340px;
+  background: var(--mango);
+  top: -120px;
+  left: -80px;
+}
+
+.hero-blob::after {
+  width: 300px;
+  height: 300px;
+  background: var(--berry);
+  top: -60px;
+  right: -60px;
+}
+
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 28px;
+}
+
+.waveform span {
+  display: block;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--teal);
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+.waveform span:nth-child(1) { height: 10px; animation-delay: 0s; }
+.waveform span:nth-child(2) { height: 22px; animation-delay: 0.15s; }
+.waveform span:nth-child(3) { height: 14px; animation-delay: 0.3s; }
+.waveform span:nth-child(4) { height: 26px; animation-delay: 0.45s; }
+.waveform span:nth-child(5) { height: 10px; animation-delay: 0.6s; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+.mic-pulse {
+  box-shadow: 0 0 0 0 rgba(232, 93, 117, 0.5);
+  animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(232, 93, 117, 0.45); }
+  70% { box-shadow: 0 0 0 26px rgba(232, 93, 117, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(232, 93, 117, 0); }
+}
+
+.card {
+  background: white;
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 2px rgba(34, 31, 25, 0.04), 0 8px 24px rgba(34, 31, 25, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(34, 31, 25, 0.05), 0 14px 32px rgba(34, 31, 25, 0.09);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mic-pulse, .waveform span { animation: none; }
+}
