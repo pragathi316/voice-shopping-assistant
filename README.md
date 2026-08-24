@@ -181,3 +181,14 @@ co-occurrence and blended scoring logic). Extend with `pytest` for the
       the steps above for a hosted URL)
 - [x] GitHub-ready repository with source code and this README
 - [x] 200-word approach write-up (`docs/WRITEUP.md`)
+
+## Application Screenshots
+
+### Voice Command Shopping List
+![Shopping List](docs/screenshots/image1.png)
+
+### Semantic Product Search
+![Semantic Search](docs/screenshots/image.png)
+
+### Smart Recommendations
+![Recommendations](docs/screenshots/image2.png)
